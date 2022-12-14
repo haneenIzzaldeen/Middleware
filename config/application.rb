@@ -13,7 +13,7 @@ module Middleware
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 7.0
     # config.middleware.use MyMiddleware 
-    config.middleware.insert_before Rails::Rack::Logger, DeltaLogger
+    # config.middleware.insert_before Rails::Rack::Logger, DeltaLogger
     # config.middleware.insert_after Rails::Rack::Logger, DeltaLogger
     config.middleware.use DeltaLogger
     # config.middleware.swap ActionDispatch::ParamsParser, MyParamsParser
