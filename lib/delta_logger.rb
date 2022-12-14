@@ -17,15 +17,14 @@ def call env
     city=  results.first.city
     ip = request.env['REMOTE_ADDR']
     time = Time.now
-    log_status(browser , address  , country, time ,ip)
+    log_status(browser , address, city  , country, time ,ip)
 
     [status, headers, response]
 end
 
 
-def log_status(browser , address  , country,time, ip)
-
-    Rails.logger.info("----- [HTTP Request] \nBrowser=#{browser} \nAddress=#{address} \nCountry = #{country} \nTime= #{time} \nIp=#{ip} ")
+def log_status(browser , address  , city, country,time, ip)
+    Rails.logger.info("--------------------------------------- [HTTP Request]--------------------------------------- \nBrowser:  #{browser} \nAddress:  #{address} \nCountry: #{country}  \nCity:  #{city} \nTime: #{time} \nIp:  #{ip} \n--------------------------------------------------------------------------------------------- ")
 end
 end
 
